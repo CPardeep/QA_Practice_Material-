@@ -66,17 +66,40 @@ Sakila database Exercises
 
 17. What is the average running time of films by category?
 
-    SELECT avg(length) AS average_length_of_all_films FROM film;
-
-    SELECT category_id, name FROM category;
+    SELECT AVG(film.length), category.name FROM film
+    JOIN film_category ON film.film_id = film_category.film_id
+    JOIN category ON category.category_id = film_category.category_id
+    GROUP BY category.name;
 
 18. How many movies have Robots in them?
+
+  SELECT COUNT(film_id) FROM film WHERE description LIKE "%Robots%";
+  SELECT COUNT(film_id) FROM film WHERE description LIKE "%robot%";
+
 19. Find the movie(s) with the longest runtime.
+
+  SELECT title, length FROM film ORDER BY length DESC LIMIT 10;
+
 20. Count how many movies were released in 2010.
+
+  SELECT COUNT(film_id), release_year FROM film WHERE release_year = 2010;
+
 21. Find the titles of all horror movies.
+
+  SELECT film.title, category.name FROM film
+  JOIN film_category ON film.film_id = film_category.film_id
+  JOIN category ON category.category_id = film_category.category_id
+  WHERE category.name = "horror";
+
 22. Return the full name of the staff member – in a column named full_name – with the ID
 of 1.
+
+  SELECT CONCAT(first_name, " ", last_name) AS full_name FROM staff WHERE staff_id = 1;
+
 23. Retrieve all movies that Fred Costner has appeared in.
+
+  SELECT film.title FROM actor JOIN film_actor ON
+
 24. Find out which location has the most copies of BUCKET BROTHERHOOD.
 25. How many distinct countries are there?
 26. What are the names of all the languages in the database (sorted alphabetically)?
