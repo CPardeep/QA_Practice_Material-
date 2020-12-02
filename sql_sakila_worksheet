@@ -16,7 +16,7 @@ Sakila database Exercises
 
   SELECT * FROM actor WHERE actor_id % 10 = 0;
 
-/* 5. What is the description of the movie with ID of 100? */
+5. What is the description of the movie with ID of 100? */
 
   SELECT description FROM film WHERE film_id = 100;
 
@@ -69,8 +69,6 @@ Sakila database Exercises
     SELECT avg(length) AS average_length_of_all_films FROM film;
 
     SELECT category_id, name FROM category;
-
-    
 
 18. How many movies have Robots in them?
 19. Find the movie(s) with the longest runtime.
