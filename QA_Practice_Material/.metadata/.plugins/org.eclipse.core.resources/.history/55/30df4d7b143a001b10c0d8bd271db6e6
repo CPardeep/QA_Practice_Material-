@@ -1,0 +1,9 @@
+package com.qa.vehicles;
+
+public class Truck {
+
+	public Truck() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

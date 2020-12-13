@@ -1,0 +1,22 @@
+package com.qa.dao;
+
+import java.awt.List;
+
+import com.qa.vehicles.Vehicle;
+import java.util.List;
+
+public interface Dao< T extends Vehicle> {
+
+	T modelFromVehicle(T vehicle);
+	
+	T create(T vehicle);
+	
+	T read(int id);
+	
+	List readAll();
+	
+	boolean delete(int id);
+	
+	
+		
+}

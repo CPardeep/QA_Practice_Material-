@@ -1,0 +1,29 @@
+package com.qa.garage;
+
+public class Car extends Vehicle{
+	private int doors;
+	private String model;
+	
+	public Car(String brand, String colour, int doors, String model) {
+		super(brand, colour, "Car", 200);
+		this.doors = doors;
+		this.model = model;
+		
+	}
+
+	public int getDoors() {
+		return doors;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [" + doors + " " + model + " " + id + "]";
+	}
+	
+	
+	
+}

@@ -1,0 +1,44 @@
+package com.qa.garage;
+import java.util.ArrayList; 
+
+public class Garage {
+	
+	private ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
+	
+	public Garage() {
+		
+	}
+	
+	public void add(Vehicle vehicle) {
+		garage.add(vehicle);
+	}
+	
+	public void clearGarage() {
+		garage.clear();
+	}
+	
+	
+	public void removeVehicle(String type) {
+		garage.removeIf(Vehicle -> Vehicle.getType().equals(type));
+	}
+	
+
+//	public void checkArray() {
+//		for(T x: garage) {
+//			System.out.println(x.getBrand() + " " + x.getColour() + " " + x.getType() + " "+ x.toString());
+//		}
+	}
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

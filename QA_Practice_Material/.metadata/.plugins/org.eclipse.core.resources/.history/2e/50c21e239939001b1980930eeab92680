@@ -1,0 +1,46 @@
+package com.qa.garage;
+
+public abstract class Vehicle {
+	private String brand;
+	private String colour;
+	private String type;
+	private int cost;
+	protected int id;
+	
+	public Vehicle(String brand, String colour, String type, int cost) {
+		this.brand = brand; 
+		this.colour = colour;
+		this.type = type;
+		this.cost = cost;
+	}
+	
+	
+	
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getColour() {
+		return colour;
+	}
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	public int getId() {
+		return id;
+	}
+}

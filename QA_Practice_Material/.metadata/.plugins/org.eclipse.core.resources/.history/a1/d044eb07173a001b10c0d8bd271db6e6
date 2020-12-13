@@ -1,0 +1,38 @@
+package com.qa.dao;
+import java.util.List;
+
+import com.qa.utils.Garage;
+import com.qa.vehicles.Vehicle;
+import com.qa.vehicles.Car;
+
+public class CarDAO implements Dao {
+	
+	Garage<?> garage = Garage.getInstance();
+	
+	public Car modelFromVehicle1(Vehicle vehicle) {
+		return (Car) vehicle;
+	}
+	
+	public Car create(Vehicle vehicle) {
+		garage.add(vehicle);
+		
+		return (Car) vehicle ;
+	}
+	
+	public Car read(int id) {
+		return null;
+	}
+	
+	public List readAll() {
+		garage.checkArray();
+		return null; 
+	}
+	
+	public boolean delete(int id) {
+		garage.removeVehicleById(id);
+		return false;
+	}
+
+
+
+}

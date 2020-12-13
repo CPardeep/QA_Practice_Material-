@@ -1,0 +1,26 @@
+package com.qa.Controller;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.qa.controllers.CarController;
+import com.qa.dao.CarDAO;
+
+public class TestGarage {
+	
+	CarDAO carDao = new CarDAO();
+	CarController carController = new CarController(carDao);
+
+	
+	
+	
+	
+
+}

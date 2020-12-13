@@ -1,0 +1,23 @@
+package com.qa.menu;
+
+
+public class Menu {
+	
+	
+
+	public Menu() {
+		//initalise all the DAOs
+	}
+	
+	public void start() {
+		System.out.println("(1) for Car");
+		System.out.println("(2) for Motorcycle");
+		System.out.println("(13 for Truck");
+		
+		int selection = input.getNumber();
+		switch(selection) {
+		Case 1:
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.qa.controllers;
+import com.qa.vehicles.Motorcycle;
+import java.util.List;
+import com.qa.vehicles.Vehicle;
+import com.qa.utils.UserInput;
+import com.qa.dao.*;
+
+public class MotorcycleController impliments GarageController {
+
+	public MotorcycleController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

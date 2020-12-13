@@ -1,0 +1,8 @@
+package com.qa.Dao;
+
+import com.qa.dao.MotorcycleDAO;
+import com.qa.vehicles.Motorcycle;
+
+public class TestMotorcycleDao {
+
+}

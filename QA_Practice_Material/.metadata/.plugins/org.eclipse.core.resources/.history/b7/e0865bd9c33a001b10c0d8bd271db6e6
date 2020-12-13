@@ -1,0 +1,48 @@
+package com.qa.dao;
+
+import java.util.List;
+import com.qa.utils.Garage;
+import com.qa.vehicles.Vehicle;
+import com.qa.vehicles.Car;
+import com.qa.vehicles.Motorcycle;
+
+public class MotorcycleDAO implements Dao {
+	// This method checks if an garage exists, if it does it returns it in an garage list.
+	Garage garage = Garage.getInstance();
+	
+	//This method is called upon to change vehicle object to a car object. 
+	public Motorcycle modelFromVehicle(Vehicle vehicle) {
+		return (Motorcycle) vehicle;
+	}
+
+	// this method can be called by the controller to add a vehicle to the garage.
+	public Motorcycle create(Vehicle vehicle) {
+		garage.add(vehicle);
+		return (Motorcycle) vehicle ;
+	}
+
+	@Override
+	public Vehicle read(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vehicle update(Vehicle vehicle, int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean delete(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

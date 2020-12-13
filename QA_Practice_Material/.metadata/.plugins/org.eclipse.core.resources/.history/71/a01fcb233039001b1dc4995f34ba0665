@@ -1,0 +1,7 @@
+package com.qa.garage;
+
+public class Motorcycle extends Vehicle{
+	private int engineSize;
+	
+	
+}

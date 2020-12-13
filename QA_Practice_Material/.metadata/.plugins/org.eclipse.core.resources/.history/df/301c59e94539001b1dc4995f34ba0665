@@ -1,0 +1,9 @@
+package com.qa.garage;
+import java.util.scanner;
+
+public class ScannerInput {
+	Scanner myObj = new Scanner(System.in);
+	
+	
+	
+}

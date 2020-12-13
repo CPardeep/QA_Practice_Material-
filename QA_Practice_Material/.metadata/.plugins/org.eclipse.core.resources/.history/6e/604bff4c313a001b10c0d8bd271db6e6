@@ -1,0 +1,80 @@
+package com.qa.controllers;
+
+import com.qa.vehicles.Car;
+import java.util.List;
+import com.qa.vehicles.Vehicle;
+import com.qa.utils.UserInput;
+import com.qa.dao.*;
+
+public class CarController implements GarageController<Car> {
+
+	UserInput input = new UserInput();
+	private CarDAO carDao;
+
+	public CarController(CarDAO carDao) {
+		this.carDao = carDao;
+	}
+
+	public Car create() {
+		System.out.println("what is the brand?");
+		String brand = input.getString();
+		System.out.println("what colour is it?");
+		String colour = input.getString();
+		System.out.println("How many doors?");
+		int doors = input.getInt();
+		System.out.println("what is the model?");
+		String model = input.getString();
+		Car fredo = new Car(brand, colour, doors, model);
+		Car car = carDao.create(fredo);
+		return car;
+	}
+
+	public Car read() {
+		System.out.println("What is the ID?");
+		int id = input.getInt();
+		Car car = carDao.read(id);
+		return car;
+	}
+	
+	public List<Car> realAll() {
+		List<Car> cars = carDao.readAll();
+			for (Car x: cars) {
+				System.out.println(x.toString());
+			}
+		return cars;
+	}
+	
+	public boolean delete() {
+		System.out.println("what is the id of the car you want to delete?");
+		int id = input.getInt();
+		if (id != 0) {
+			boolean answer = carDao.delete(id);
+			return answer;
+			
+		}
+		else {
+		return false;
+		}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public Car update() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Car> readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

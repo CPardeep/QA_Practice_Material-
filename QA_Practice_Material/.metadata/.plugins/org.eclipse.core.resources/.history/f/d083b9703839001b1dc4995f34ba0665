@@ -1,0 +1,29 @@
+package com.qa.garage;
+import java.util.ArrayList; 
+
+public class Garage{
+	
+	private ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
+	
+	public Garage(Vehicle vehicle) {
+		garage.add(vehicle);
+		checkVehicle();
+	}
+	
+	
+	public void checkVehicle() {
+		
+		for(Vehicle x: garage) {
+			System.out.println(x);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

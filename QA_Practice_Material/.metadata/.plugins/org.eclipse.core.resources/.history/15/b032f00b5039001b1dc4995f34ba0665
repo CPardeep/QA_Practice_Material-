@@ -1,0 +1,46 @@
+package com.qa.garage;
+import java.util.ArrayList; 
+
+public class Garage extends Vehicle{
+	
+	private ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
+	
+	
+	
+	public void add(Vehicle vehicle) {
+		garage.add(vehicle);
+	}
+	
+	public void createBill() {
+		for(Vehicle x: garage) {
+			System.out.println(x.getCost() + " "+ x.getBrand() );
+		}
+	}
+	
+	public void removeVehicle(int value) {
+		garage.remove(value);
+	}
+	
+	public void clearGarage() {
+		garage.clear();
+	}
+
+	public void checkArray() {
+		for(Vehicle x: garage) {
+			System.out.println(x.getBrand() + x);
+		}
+	}
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

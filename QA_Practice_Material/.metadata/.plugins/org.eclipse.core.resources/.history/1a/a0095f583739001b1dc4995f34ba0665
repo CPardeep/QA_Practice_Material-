@@ -1,0 +1,13 @@
+package com.qa.garage;
+
+public class Runner {
+	 
+	Garage garage = new Garage();
+	Car fredo = new Car("m3", 2, "bmw", "blue");
+	
+	garage.addVehicle(fredo);
+	
+	
+	 
+	 
+}

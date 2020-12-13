@@ -1,0 +1,38 @@
+package com.qa.garage;
+
+public class Runner {
+	 
+	public static void main(String args[]) {
+		
+		Garage garage = new Garage();
+//		ScannerInput scan = new ScannerInput();
+//		
+//		System.out.println("what is the brand?");
+//		String brand = scan.getString();
+//		
+//		System.out.println("what colour is it?");
+//		String colour = scan.getString();
+//		
+//		System.out.println("How many doors?");
+//		int doors = scan.getNumber();
+//		
+//		System.out.println("what is the model?");
+//		String model = scan.getString();
+//		
+//	
+//		Car fredo = new Car(brand, colour, doors, model);
+//		garage.add(fredo);
+//	
+//		garage.checkArray();
+		
+		
+			
+		
+		
+		
+		
+	}
+	
+	 
+	 
+}

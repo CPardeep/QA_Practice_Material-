@@ -1,0 +1,14 @@
+package com.qa.utils;
+import com.qa.menu.*;
+
+public class Runner {
+	
+	private Menu menu;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Menu.start();
+
+	}
+
+}

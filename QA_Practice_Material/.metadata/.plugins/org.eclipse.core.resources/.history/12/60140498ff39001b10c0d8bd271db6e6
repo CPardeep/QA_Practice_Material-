@@ -1,0 +1,7 @@
+package com.qa.controllers;
+
+import com.qa.Vehicles.Vehicle;
+
+public interface GarageController<T extends Vehicle> {
+
+}

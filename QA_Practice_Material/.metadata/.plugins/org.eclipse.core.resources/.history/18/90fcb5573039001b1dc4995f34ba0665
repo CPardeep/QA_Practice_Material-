@@ -1,0 +1,11 @@
+package com.qa.garage;
+
+public class Car extends Vehicle{
+	private int doors;
+	private String model;
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,58 @@
+package com.qa.controllers;
+import com.qa.vehicles.Car;
+import java.util.List;
+import com.qa.vehicles.Vehicle;
+import com.qa.utils.UserInput;
+import com.qa.dao.*;
+
+public class CarController implements GarageController {
+
+	UserInput input = new UserInput();
+	private CarDAO carDao;
+
+	public CarController(CarDAO carDao) {
+		this.carDao = carDao;
+	}
+
+	public Vehicle create() {
+
+		System.out.println("what is the brand?");
+		String brand = input.getString();
+		System.out.println("what colour is it?");
+		String colour = input.getString();		
+		System.out.println("How many doors?");
+		int doors = input.getInt();		
+		System.out.println("what is the model?");
+		String model = input.getString();
+		Car fredo = new Car(brand, colour, doors, model);
+		Car car = carDao.create(fredo);
+
+		return car;
+	}
+
+	public boolean delete() {
+		return false;
+	}
+
+	public Vehicle read() {
+
+		return null;
+	}
+
+	public Vehicle realAll() {
+		return null;
+	}
+
+	public Vehicle update() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

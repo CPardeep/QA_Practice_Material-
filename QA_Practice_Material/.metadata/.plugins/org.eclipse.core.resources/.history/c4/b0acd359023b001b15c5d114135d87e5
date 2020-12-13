@@ -1,0 +1,25 @@
+package com.qa.Dao;
+
+import com.qa.dao.MotorcycleDAO;
+import com.qa.vehicles.Motorcycle;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestMotorcycleDao {
+	MotorcycleDAO motorDao = new MotorcycleDAO();
+	Motorcycle testMotor = new Motorcycle("Ducati", "Red", 2);
+	Motorcycle testMotor1 = new Motorcycle("Bmw", "Red", 2);
+	Motorcycle testMotor2 = new Motorcycle("Royal Enfield", "Red", 2);
+	
+	@Before 
+	
+}
+

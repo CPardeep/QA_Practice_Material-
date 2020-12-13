@@ -1,0 +1,64 @@
+package com.qa.controllers;
+
+//Interface
+import com.qa.vehicles.Vehicle;
+import com.qa.vehicles.Car;
+//Importing original class 
+import com.qa.vehicles.Motorcycle;
+import com.qa.dao.MotorcycleDAO;
+//
+import java.util.List;
+import com.qa.utils.UserInput;
+
+public class MotorcycleController implements GarageController {
+
+	UserInput input = new UserInput();
+	private MotorcycleDAO motorcycleDao;
+
+	// Constructor which takes in an object of Motorcycle data access object which
+	// has been assigned information.
+	public MotorcycleController(MotorcycleDAO motorcycleDao) {
+		this.motorcycleDao = motorcycleDao;
+	}
+
+	public Vehicle create() {
+		// Asks
+		System.out.println("what is the brand?");
+		String brand = input.getString();
+		//
+		System.out.println("what colour is it?");
+		String colour = input.getString();
+		//
+		System.out.println("How many doors?");
+		int engineSize = input.getInt();
+		//
+		Motorcycle fredo = new Motorcycle(brand, colour, engineSize);
+		//
+		Motorcycle motorcycle = motorcycleDao.create(fredo);
+		//
+		System.out.println(motorcycle.toString());
+		//
+		return motorcycle;
+	}
+
+	public Vehicle read() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Vehicle update() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean delete() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

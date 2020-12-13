@@ -1,0 +1,33 @@
+package com.qa.vehicles;
+
+import com.qa.garage.Vehicle;
+
+public class Car extends Vehicle{
+	private int doors;
+	private String model;
+	
+	public Car(String brand, String colour, int doors, String model) {
+		super(brand, colour);
+		this.doors = doors;
+		this.model = model;
+		this.type = "Car";
+	}
+	
+	@Override
+	public double cost() {
+		return this.getId()+25;
+	}
+
+	public int getDoors() {
+		return doors;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	@Override
+	public String toString() {
+		return " Type: Car, NumOfDoors: " + doors + ", Model: " + model;
+	}
+	

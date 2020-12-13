@@ -1,0 +1,24 @@
+package com.qa.garage;
+
+public class Car extends Vehicle{
+	private int doors;
+	private String model;
+	
+	public Car(String model, int doors, String brand, String colour) {
+		this.doors = doors;
+		this.model = model;
+		super.setBrand(brand);
+		super.setColour(colour);
+	}
+
+	public int getDoors() {
+		return doors;
+	}
+
+	public String getModel() {
+		return model;
+	}
+	
+	
+	
+}

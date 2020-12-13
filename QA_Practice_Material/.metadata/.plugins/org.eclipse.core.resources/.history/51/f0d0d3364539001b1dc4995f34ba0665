@@ -1,0 +1,18 @@
+package com.qa.garage;
+
+public class Motorcycle extends Vehicle{
+	private int engineSize;
+	
+	public Motorcycle(int engineSize, String brand, String colour, String type) {
+		this.engineSize = engineSize;
+		super.setColour(colour);
+		super.setBrand(brand);
+		super.setType(type);
+		super.setCost(price());
+	}
+	
+	public int price() {
+		int price = 100;
+		return price;
+	}
+}

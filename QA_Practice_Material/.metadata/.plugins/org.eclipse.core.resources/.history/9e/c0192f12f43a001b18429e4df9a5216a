@@ -1,0 +1,18 @@
+package com.qa.Dao;
+
+import com.qa.dao.CarDAO;
+
+import org.junit.Test;
+import org.junit.Beforeclass;
+
+public class TestDao {
+	
+	CarDAO carDao = new CarDAO();
+	
+	@Beforeclass
+
+	
+	
+	
+	
+}

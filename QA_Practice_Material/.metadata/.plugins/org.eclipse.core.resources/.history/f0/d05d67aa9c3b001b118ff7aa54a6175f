@@ -1,0 +1,47 @@
+package com.qa.utils;
+import com.qa.menu.Menu;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		//Menu menu = new Menu();
+		
+		//menu.start();
+		
+		//Method 1 
+		String x = "Hello World";
+		
+		System.out.println(x.split("\\s+").length);
+		
+		//method 2
+		for(int i = 0; i < x.length(); i++) {
+			char l = x.charAt(i);
+			System.out.println(l);
+		}
+		String[] split = x.split("\\s");
+		for (String a: split) {
+			System.out.println(a);
+		}
+
+		
+		//method 3
+		
+		
+		for(int i = 2; i <= split.length; i--) {
+			System.out.println(split[i]);
+		}
+		
+		//method 4
+		String one = "hello";
+		String two = "hello";
+		
+		if (one.equals(two)){
+			System.out.println("TRUE");
+		}
+		
+		
+		
+
+	}
+
+}

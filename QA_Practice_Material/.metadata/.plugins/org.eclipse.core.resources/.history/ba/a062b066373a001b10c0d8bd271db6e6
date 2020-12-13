@@ -1,0 +1,16 @@
+package com.qa.controllers;
+import java.util.List;
+import com.qa.vehicles.Vehicle;
+
+public interface GarageController {
+	Vehicle create();
+	
+	boolean delete();
+	
+	Vehicle read();
+	
+	List<Vehicle> readAll();
+	
+	Vehicle update();
+	
+}

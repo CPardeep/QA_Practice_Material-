@@ -1,0 +1,28 @@
+package com.qa.utils;
+import com.qa.menu.Menu;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		//Menu menu = new Menu();
+		
+		//menu.start();
+		
+		//Method 1 
+		String x = "Hello World";
+		
+		System.out.println(x.split("\\s+").length);
+		
+		//method 2
+		for(String i : x) {
+			char l = x.charAt(i);
+			System.out.println(l);
+		}
+		
+		
+		
+		
+
+	}
+
+}

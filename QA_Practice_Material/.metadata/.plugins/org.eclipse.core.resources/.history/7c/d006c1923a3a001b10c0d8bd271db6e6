@@ -1,0 +1,14 @@
+package com.qa.utils;
+import com.qa.menu.Menu;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		Menu menu = new Menu();
+		
+		
+		//Menu.start();
+
+	}
+
+}

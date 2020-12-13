@@ -1,0 +1,21 @@
+package com.qa.garage;
+
+public class Runner {
+	 
+	public static void main(String args[]) {
+		
+		Garage garage = new Garage();
+		
+		Car fredo = new Car("m3", 2, "bmw", "blue");
+		Motorcycle mi = new Motorcycle(2, "Ducati", "Red");
+		
+		garage.add(fredo);
+		garage.add(mi);
+		
+		
+		garage.createBill();
+	}
+	
+	 
+	 
+}

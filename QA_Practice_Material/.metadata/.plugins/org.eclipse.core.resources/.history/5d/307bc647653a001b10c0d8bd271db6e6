@@ -1,0 +1,9 @@
+package com.qa.controllers;
+
+public class TruckController implements GarageController{
+
+	public TruckController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

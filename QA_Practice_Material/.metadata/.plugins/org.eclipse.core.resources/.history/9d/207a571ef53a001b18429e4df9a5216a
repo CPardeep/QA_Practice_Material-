@@ -1,0 +1,20 @@
+package com.qa.Dao;
+
+import com.qa.dao.CarDAO;
+
+import org.junit.Test;
+
+public class TestDao {
+	
+	CarDAO carDao = new CarDAO();
+	Car testCar = new Car("BMW", "Blue", 2, "M3");
+	
+	@Test
+	public void create() {
+		
+	}
+	
+	
+	
+	
+}

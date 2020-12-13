@@ -1,0 +1,12 @@
+package com.qa.garage;
+
+public class Truck extends Vehicle {
+	private String cabinType;
+	
+	public Truck(String cabinType, String brand, String colour) {
+		this.cabinType = cabinType;
+		super.setBrand(brand);
+		super.setColour(colour);
+		super.setCost(500);
+	}
+}

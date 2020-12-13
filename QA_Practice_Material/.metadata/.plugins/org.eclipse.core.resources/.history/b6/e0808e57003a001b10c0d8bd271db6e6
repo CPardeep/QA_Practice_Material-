@@ -1,0 +1,11 @@
+package com.qa.dao;
+
+import com.qa.vehicles.Vehicle;
+
+public interface Dao< T extends Vehicle> {
+
+	
+	
+	
+		
+}

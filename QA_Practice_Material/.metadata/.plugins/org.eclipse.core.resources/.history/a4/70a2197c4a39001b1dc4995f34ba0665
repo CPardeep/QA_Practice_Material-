@@ -1,0 +1,33 @@
+package com.qa.garage;
+
+public class Runner {
+	 
+	public static void main(String args[]) {
+		
+		Garage garage = new Garage();
+		ScannerInput scan = new ScannerInput();
+		
+		System.out.println("what is the name?");
+		String name = scan.getString();
+		
+		System.out.println("How many doors?");
+		int doors = scan.getNumber();
+		
+		System.out.println("How many doors?");
+		int doors = scan.getNumber();
+		
+		Car fredo = new Car("Fredo", 2, "bmw", "blue", "Car");
+		Motorcycle mi = new Motorcycle(2, "Ducati", "Red", "Motorcycle");
+		
+		garage.add(fredo);
+		garage.add(mi);
+		
+		
+		
+		
+		
+	}
+	
+	 
+	 
+}

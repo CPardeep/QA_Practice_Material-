@@ -1,0 +1,9 @@
+package qa.com.utills;
+
+public class ScannerInput {
+
+	public ScannerInput() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

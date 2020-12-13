@@ -1,0 +1,44 @@
+package com.qa.Dao;
+
+import com.qa.dao.MotorcycleDAO;
+import com.qa.vehicles.Motorcycle;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class TestMotorcycleDao {
+	MotorcycleDAO motorDao = new MotorcycleDAO();
+	Motorcycle testMotor = new Motorcycle("Ducati", "Red", 2);
+	Motorcycle testMotor1 = new Motorcycle("Bmw", "Red", 2);
+	Motorcycle testMotor2 = new Motorcycle("Royal Enfield", "Red", 2);
+	
+	@Before
+	public void testSetup() {
+		motorDao.create(testMotor);
+		motorDao.create(testMotor1);
+		motorDao.create(testMotor2);
+	}
+	@Ignore
+	@Test 
+	public void testCreate() {
+		assertEquals(testMotor, motorDao.create(testMotor));
+		assertEquals(testMotor1, motorDao.create(testMotor1));
+		assertEquals(testMotor2, motorDao.create(testMotor2));
+	}
+	@Test
+	public void testRead() {
+		assertEquals(testMotor, motorDao.read(1));
+		assertEquals(testMotor, motorDao.read(2));
+		assertEquals(testMotor, motorDao.read(3));
+	}
+	
+}
+

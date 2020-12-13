@@ -1,0 +1,71 @@
+package com.qa.utils;
+import java.util.ArrayList;
+import com.qa.vehicles.Vehicle;
+
+public class Garage {
+	
+	
+	private static Garage instance = null;
+	
+	private Garage() {
+		
+	}
+		
+	public static Garage getInstance() {
+		if (instance == null) {
+			instance = new Garage();
+		}
+		return instance;
+		
+	}
+
+	private ArrayList<Vehicle> garage = new ArrayList<T>();
+	
+	public ArrayList<Vehicle> getGarage() {
+		return garage;
+	}
+	
+	public void add(Vehicle vehicle) {
+		garage.add(vehicle);
+	}
+	
+	public void clearGarage() {
+		garage.clear();
+	}
+	
+	public void removeVehicleByType(String type) {
+		garage.removeIf(Vehicle -> Vehicle.getType().equals(type));
+	}
+	
+	public boolean removeVehicleById(int id) {
+		garage.removeIf(Vehicle -> Vehicle.getId() == id);
+		return true;
+	}
+	
+	public void checkArray() {
+		for(Vehicle x: garage) {
+			System.out.println(x.toString());
+		} 
+	}
+	
+	public ArrayList<Vehicle> searchGarage(String type) {
+		ArrayList<Vehicle> found = new ArrayList<Vehicle>();
+		for(Vehicle vehicle: garage) {
+			if(vehicle.getType().equals(type)) {
+				found.add(vehicle);
+			}
+		}
+		return found;
+	}
+	
+	public Vehicle searchCar(int id) {
+		Vehicle v = null;
+		for(T vehicle: garage) {
+			if(vehicle.getId() == id) {
+				v = vehicle;
+			}
+		}
+		return v;
+	}
+
+}

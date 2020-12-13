@@ -1,0 +1,10 @@
+package com.qa.garage;
+
+public class Motorcycle extends Vehicle{
+	private int engineSize;
+	
+	public Motorcycle(int engineSize, String brand, String colour) {
+		this.engineSize = engineSize;
+		
+	}
+}

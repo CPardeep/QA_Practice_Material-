@@ -1,0 +1,29 @@
+package com.qa.Dao;
+
+import com.qa.dao.CarDAO;
+import com.qa.vehicles.Car;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestDao {
+	
+	CarDAO carDao = new CarDAO();
+	Car testCar = new Car("BMW", "Blue", 2, "M3");
+	Car testCar1 = new Car("BMW", "Blue", 4, "M5");
+	Car testCar2 = new Car("BMW", "Blue", 2, "M8");
+	
+	@Before
+	public void setup() {
+		carDao.create(testCar);
+		carDao.create(testCar1);
+		carDao.create(testCar2);
+	}
+	
+	@Test
+	public void testCreate() {
+		assertEquals( testCar, carDao.read(1));
+	}
+	
+	
+	
+}
